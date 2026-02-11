@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-primary-green: #30e84f;
+  --color-brand-green: #86EFAC;
+  
+  --color-pink-bg: #FADCD9;
+  --color-green-bg: #EFFFE4;
+  --color-cream-bg: #FDF0E0;
+  
+  --color-home-bg: #F3FFD6;
+  
+  --color-map-bg-light: #F0FADC;
+  --color-map-surface-light: #FFFCF5;
+  --color-map-surface-dark: #1F2937;
+  --color-map-accent: #FDBA74;
+
+  --color-create-bag-bg: #F5D7CD;
+  --color-turn-order-bg: #F0FDF4;
+  
+  --color-theme-green: #F3FFD6;
+  --color-theme-pink: #F5D7CD;
+  --color-theme-peach: #FFE6D2;
+  --color-theme-blue: #D6F3FF;
+  --color-card-light: #FFFFFF;
+  --color-text-primary-light: #000000;
+  --color-text-primary-dark: #F9FAFB;
+  --color-text-secondary-light: #4B5563;
+
+  --color-chat-primary: #30e84f;
+  --color-chat-bg: #f6f8f6;
+  --color-chat-bg-dark: #112114;
+  --color-chat-cream: #FDFBF7;
+
+  --color-nav-active: #F3FFD6;
+
+
+  --font-fredoka: "Inter", sans-serif;
+  --font-handwritten: "Gochi Hand", cursive;
+  --font-fredoka: "Fredoka", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+
+
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 40px;
+  --radius-doodle: 255px 15px 225px 15px / 15px 225px 15px 255px;
+
+
+  --shadow-doodle: 3px 3px 0px 0px rgba(0,0,0,1);
+  --shadow-doodle-sm: 2px 2px 0px 0px rgba(0,0,0,1);
+  --shadow-doodle-hover: 4px 5px 0px 0px #000000;
+  --shadow-up: 0 -6px 20px -5px rgba(0, 0, 0, 0.1);
+  
+
+  --image-dashed-pattern: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23000000FF' stroke-width='3' stroke-dasharray='12%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+
+@utility doodle-stroke {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@utility shadow-doodle {
+  box-shadow: var(--shadow-doodle);
+  border: 3px solid #000000;
+}
+
+@utility border-3 {
+  border-width: 3px;
+}
+
+@utility hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  
+  &:hover {
+    transform: translate(-50%, -110%) scale(1.1);
+    z-index: 10;
+  }
+}
+
+@utility pulse-ring {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(134, 239, 172, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(134, 239, 172, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(134, 239, 172, 0);
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #000000;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+}
