@@ -18,7 +18,7 @@ const OnboardingGive = () => {
         </div>
 
         <div className="flex-1 flex items-center justify-center p-4 relative">
-            <img src="/1.webp" alt="Onboarding Intro" />
+            <img src={`${import.meta.env.BASE_URL}1.webp`} alt="Onboarding Intro" />
         </div>
 
         <div className="px-8 pb-10">
